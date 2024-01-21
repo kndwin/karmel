@@ -1,0 +1,10 @@
+{
+  "name": "@knightsdesign/karmel",
+  "version": "0.0.1",
+  "workspaces": ["apps/*"],
+  "dependencies": {
+    "@tanstack/router-devtools": "^1.8.3",
+    "hono": "^3.12.6",
+    "zod": "^3.22.4"
+  }
+}

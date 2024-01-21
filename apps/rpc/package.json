@@ -1,0 +1,10 @@
+{
+  "name": "@knightsdesign/karmel-rpc",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11"
+  }
+}
