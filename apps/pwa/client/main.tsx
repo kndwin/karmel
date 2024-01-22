@@ -6,7 +6,7 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { RouterProvider, Router } from "@tanstack/react-router";
 
 // Import the generated route tree
-import { routeTree } from "./routeTree.gen";
+import { routeTree } from "./lib/route-tree";
 
 // Create a new router instance
 const router = new Router({ routeTree });

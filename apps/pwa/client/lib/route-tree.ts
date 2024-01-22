@@ -4,7 +4,7 @@ import { FileRoute, lazyRouteComponent } from '@tanstack/react-router'
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
+import { Route as rootRoute } from './../routes/__root'
 
 // Create Virtual Routes
 
@@ -18,7 +18,7 @@ const AboutComponentRoute = AboutComponentImport.update({
   getParentRoute: () => rootRoute,
 } as any).update({
   component: lazyRouteComponent(
-    () => import('./routes/about.component'),
+    () => import('./../routes/about.component'),
     'component',
   ),
 })
@@ -28,7 +28,7 @@ const IndexComponentRoute = IndexComponentImport.update({
   getParentRoute: () => rootRoute,
 } as any).update({
   component: lazyRouteComponent(
-    () => import('./routes/index.component'),
+    () => import('./../routes/index.component'),
     'component',
   ),
 })

@@ -4,10 +4,9 @@ import { zValidator } from "@hono/zod-validator";
 import { handle } from "hono/cloudflare-pages";
 import { z } from "zod";
 
-const app = new Hono().basePath("/api");
+import { authRoute } from "~/modules/auth/rpc";
 
-app.use(cors({ origin: "*" }));
-const root = app.get(
+const nameRoute = new Hono().get(
   "/name",
   zValidator(
     "query",
@@ -21,5 +20,11 @@ const root = app.get(
   }
 );
 
-export type AppType = typeof root;
+const app = new Hono()
+  .basePath("/api")
+  .route("/name", nameRoute)
+  .route("/auth", authRoute);
+app.use(cors({ origin: "*" }));
+
+export type AppType = typeof app;
 export const onRequest = handle(app);
