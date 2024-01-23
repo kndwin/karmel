@@ -1,0 +1,10 @@
+name = "karmel-pwa"
+
+# Define top-level environment variables
+# under the `[vars]` block using
+# the `key = "value"` format
+[env.dev]
+TURSO_URL = "libsql://karmel-db-kndwin.turso.io"
+TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDI0LTAxLTIxVDE1OjI1OjM4LjA0NTA5ODY5OFoiLCJpZCI6IjA3MjZjNzA2LWI4NzEtMTFlZS1iMTg5LWE2MDMzNTNjNjBiMyJ9.BubgmJtStJvvGxqbS3OitLd10qZoItl727an-Hw8-R5_rR0HCiG3gX0xD2XP-S0wGvMkmOszx1Z--JLeZRztAQ"
+GITHUB_CLIENT_ID = ""
+GITHUB_CLIENT_SECRET = ""

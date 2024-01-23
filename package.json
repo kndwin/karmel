@@ -1,15 +1,5 @@
 {
   "name": "@knightsdesign/karmel",
   "version": "0.0.1",
-  "workspaces": ["apps/*"],
-  "dependencies": {
-    "@libsql/client": "^0.4.0-pre.7",
-    "@lucia-auth/adapter-sqlite": "^2.0.1",
-    "@lucia-auth/oauth": "^3.5.2",
-    "@tanstack/router-devtools": "^1.8.3",
-    "dotenv": "^16.3.2",
-    "hono": "^3.12.6",
-    "lucia": "^2.7.6",
-    "zod": "^3.22.4"
-  }
+  "workspaces": ["apps/*"]
 }
