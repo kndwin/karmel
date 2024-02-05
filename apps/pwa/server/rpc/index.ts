@@ -1,10 +1,13 @@
-import { Hono, MiddlewareHandler } from "hono";
+import { MiddlewareHandler, Hono } from "hono";
+import { env } from "hono/adapter";
+
 import { getDB } from "~/server/database/client";
+import { sessionMiddleware, protectedMiddleware } from "~/modules/auth/rpc";
 
 const dbMiddleware: MiddlewareHandler<{
   Bindings: {
-    TURBO_URL: string;
-    TURBO_TOKEN: string;
+    TURSO_URL: string;
+    TURSO_TOKEN: string;
   };
   Variables: {
     db: ReturnType<typeof getDB>;
@@ -13,8 +16,8 @@ const dbMiddleware: MiddlewareHandler<{
   c.set(
     "db",
     getDB({
-      authToken: c.env.TURBO_TOKEN,
-      url: c.env.TURBO_URL,
+      authToken: env(c).TURSO_TOKEN,
+      url: env(c).TURSO_URL,
     })
   );
 
@@ -23,4 +26,8 @@ const dbMiddleware: MiddlewareHandler<{
 
 export const middleware = {
   db: dbMiddleware,
+  session: sessionMiddleware,
+  protected: protectedMiddleware,
 };
+
+export const route = new Hono().use(middleware.db).use("*", middleware.db);

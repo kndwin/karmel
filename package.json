@@ -1,5 +1,8 @@
 {
   "name": "@knightsdesign/karmel",
   "version": "0.0.1",
-  "workspaces": ["apps/*"]
+  "workspaces": ["apps/*"],
+  "dependencies": {
+    "hono": "^3.12.10"
+  }
 }

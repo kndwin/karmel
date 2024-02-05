@@ -8,9 +8,16 @@ export function getLibSQLClient(env: { url: string; authToken: string }) {
 }
 
 export function getDB(env: { url: string; authToken: string }) {
-  return drizzle(createClient(env), {
-    schema: {
-      ...auth,
-    },
-  });
+  return Object.assign(
+    drizzle(createClient(env), {
+      schema: {
+        ...auth,
+      },
+    }),
+    {
+      schema: {
+        ...auth,
+      },
+    }
+  );
 }
