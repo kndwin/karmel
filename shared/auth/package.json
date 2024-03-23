@@ -1,0 +1,10 @@
+{
+	"name": "modules/auth",
+	"dependencies": {
+		"lucia": "^3.0.1",
+		"@lucia-auth/adapter-drizzle": "^1.0.0",
+		"@lucia-auth/oauth": "^3.5.2",
+		"arctic": "^1.1.4",
+		"oslo": "^1.0.4"
+	}
+}

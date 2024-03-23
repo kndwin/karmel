@@ -1,0 +1,14 @@
+{
+  "record": {
+    "hosts": [
+      "localhost",
+      "127.0.0.1",
+      "172.20.10.3"
+    ],
+    "hash": {
+      "key": "3fe9c9a6b196783ce5bd2659c1a86479b68424fd6c18013b909e95205bc9a1b9",
+      "cert": "18eb06d25dae77bf6798880c4f6b5fb1e9ec604d234878fe6a22e1a800845fc5"
+    }
+  },
+  "configFilePath": "/Users/knd/Code/knights/karmel/apps/pwa/certs/config.json"
+}

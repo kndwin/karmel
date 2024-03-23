@@ -2,3 +2,6 @@ tags*
 node_modules
 pages
 database/local.db
+**/.env.dev
+**/.env
+**/.dev.vars

@@ -1,0 +1,6 @@
+{
+	"name": "apps/api",
+	"scripts": {
+		"dev": "wrangler dev --config wrangler.toml --env dev index.ts"
+	}
+}
